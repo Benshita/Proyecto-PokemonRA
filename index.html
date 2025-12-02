@@ -27,8 +27,17 @@
 
             <!-- Squirtle -->
             <a-asset-item id="squirtle-asset" src="assets/squirtle.glb"></a-asset-item>
-        </a-assets>
 
+            <!-- Pikachu video -->
+            <video
+                id="pikachu-video"
+                src="assets/pikachu_saluda.mp4"
+                preload="auto"
+                loop
+                muted
+                crossorigin="anonymous"
+            ></video>
+        </a-assets>
 
         <!-- CHARMANDER MARKER -->
         <a-marker type="pattern" url="assets/charmander_marker.patt">
@@ -41,7 +50,6 @@
             ></a-entity>
         </a-marker>
 
-
         <!-- BULBASAUR MARKER -->
         <a-marker type="pattern" url="assets/bulbasaur_marker.patt">
             <a-entity
@@ -52,7 +60,6 @@
                 gesture-handler
             ></a-entity>
         </a-marker>
-
 
         <!-- SQUIRTLE MARKER -->
         <a-marker type="pattern" url="assets/squirtle_marker.patt">
@@ -65,6 +72,16 @@
             ></a-entity>
         </a-marker>
 
+        <!-- PIKACHU VIDEO MARKER -->
+        <a-marker type="pattern" url="assets/pikachu_marker.patt">
+            <a-video
+                src="#pikachu-video"
+                width="1"
+                height="1"
+                position="0 0 0"
+                rotation="-90 0 0"
+            ></a-video>
+        </a-marker>
 
         <!-- CAMERA -->
         <a-entity camera></a-entity>
