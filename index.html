@@ -19,6 +19,7 @@
 
         <!-- ASSETS -->
         <a-assets>
+
             <!-- Charmander -->
             <a-asset-item id="charmander-asset" src="assets/charmander_model.glb"></a-asset-item>
 
@@ -37,7 +38,9 @@
                 muted
                 crossorigin="anonymous"
             ></video>
+
         </a-assets>
+
 
         <!-- CHARMANDER MARKER -->
         <a-marker type="pattern" url="assets/charmander_marker.patt">
@@ -50,6 +53,7 @@
             ></a-entity>
         </a-marker>
 
+
         <!-- BULBASAUR MARKER -->
         <a-marker type="pattern" url="assets/bulbasaur_marker.patt">
             <a-entity
@@ -60,6 +64,7 @@
                 gesture-handler
             ></a-entity>
         </a-marker>
+
 
         <!-- SQUIRTLE MARKER -->
         <a-marker type="pattern" url="assets/squirtle_marker.patt">
@@ -72,8 +77,9 @@
             ></a-entity>
         </a-marker>
 
+
         <!-- PIKACHU VIDEO MARKER -->
-        <a-marker type="pattern" url="assets/pikachu.patt">
+        <a-marker id="pikachu-marker" type="pattern" url="assets/pikachu.patt">
             <a-video
                 src="#pikachu-video"
                 width="1"
@@ -83,8 +89,25 @@
             ></a-video>
         </a-marker>
 
+
         <!-- CAMERA -->
         <a-entity camera></a-entity>
+
+
+
+        <!-- SCRIPT PARA REPRODUCIR SOLO CON MARCADOR -->
+        <script>
+            const pikachuMarker = document.querySelector("#pikachu-marker");
+            const pikachuVideo   = document.querySelector("#pikachu-video");
+
+            pikachuMarker.addEventListener("markerFound", () => {
+                pikachuVideo.play();
+            });
+
+            pikachuMarker.addEventListener("markerLost", () => {
+                pikachuVideo.pause();
+            });
+        </script>
 
     </a-scene>
 </body>
