@@ -24,6 +24,9 @@
 
             <!-- Bulbasaur -->
             <a-asset-item id="bulbasaur-asset" src="assets/bulbasaur.glb"></a-asset-item>
+
+            <!-- Squirtle -->
+            <a-asset-item id="squirtle-asset" src="assets/squirtle.glb"></a-asset-item>
         </a-assets>
 
 
@@ -43,6 +46,18 @@
         <a-marker type="pattern" url="assets/bulbasaur_marker.patt">
             <a-entity
                 gltf-model="#bulbasaur-asset"
+                scale="0.3 0.3 0.3"
+                animation-mixer="loop: repeat"
+                class="clickable"
+                gesture-handler
+            ></a-entity>
+        </a-marker>
+
+
+        <!-- SQUIRTLE MARKER -->
+        <a-marker type="pattern" url="assets/squirtle_marker.patt">
+            <a-entity
+                gltf-model="#squirtle-asset"
                 scale="0.3 0.3 0.3"
                 animation-mixer="loop: repeat"
                 class="clickable"
