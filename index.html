@@ -24,13 +24,10 @@
 
             <!-- Bulbasaur -->
             <a-asset-item id="bulbasaur-asset" src="assets/bulbasaur.glb"></a-asset-item>
-
-            <!-- Revavroom (placeholder hasta que tengas el GLB real) -->
-            <a-asset-item id="revavroom-asset" src="assets/revavroom.glb"></a-asset-item>
         </a-assets>
 
 
-        <!-- CHARMANNDER MARKER -->
+        <!-- CHARMANDER MARKER -->
         <a-marker type="pattern" url="assets/charmander_marker.patt">
             <a-entity
                 gltf-model="#charmander-asset"
@@ -53,17 +50,6 @@
             ></a-entity>
         </a-marker>
 
-
-        <!-- REVAVROOM MARKER (requiere revavroom.glb real) -->
-        <a-marker type="pattern" url="assets/revavroom_marker.patt">
-            <a-entity
-                gltf-model="#revavroom-asset"
-                scale="0.3 0.3 0.3"
-                animation-mixer="loop: repeat"
-                class="clickable"
-                gesture-handler
-            ></a-entity>
-        </a-marker>
 
         <!-- CAMERA -->
         <a-entity camera></a-entity>
